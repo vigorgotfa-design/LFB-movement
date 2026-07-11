@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LFB Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Simple password protection
+    const password = "LFB2026"; // <- CHANGE THIS TO YOUR SECRET PASSWORD
+    if(prompt("Enter Admin Password") !== password) {
+      alert("Wrong Password!");
+      window.location = "index.html";
+    }
+  </script>
+</head>
+<body>
+  <header><h1>LFB Admin Dashboard</h1></header>
+  <div class="container">
+    <h2>Welcome Admin</h2>
+    <div class="card">
+      <h3>1. New Messages</h3>
+      <p>Check Formspree: <a href="https://formspree.io" target="_blank">formspree.io</a></p>
+    </div>
+    <div class="card">
+      <h3>2. Add New Event</h3>
+      <p>Edit `events.html` file in GitHub to add new events</p>
+    </div>
+    <div class="card">
+      <h3>3. Add Gallery Photos</h3>
+      <p>Upload photos to `images/` folder then edit `gallery.html`</p>
+    </div>
+  </div>
+</body>
+</html>
