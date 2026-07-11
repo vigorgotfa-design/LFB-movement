@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>LFB Admin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LFB Admin Dashboard</title>
   <link rel="stylesheet" href="css/style.css">
   <script>
-    // Simple password protection
-    const password = "LFB2026"; // <- CHANGE THIS TO YOUR SECRET PASSWORD
-    if(prompt("Enter Admin Password") !== password) {
-      alert("Wrong Password!");
+    // PASSWORD PROTECTION
+    const password = "LFB2026"; // <-- CHANGE THIS TO YOUR SECRET PASSWORD
+    if(prompt("Enter LFB Admin Password") !== password) {
+      alert("Access Denied!");
       window.location = "index.html";
     }
   </script>
+  <style>
+    .card { background:#fff; padding:20px; margin:15px 0; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .card h3 { color:#8B4513; margin-top:0; }
+    .card a { color:#8B4513; font-weight:bold; text-decoration:none; }
+  </style>
 </head>
 <body>
-  <header><h1>LFB Admin Dashboard</h1></header>
+  <header>
+    <div class="container">
+      <h1>LFB Admin Dashboard</h1>
+      <p>Welcome, Lift Forward Better Admin</p>
+    </div>
+  </header>
+
   <div class="container">
-    <h2>Welcome Admin</h2>
     <div class="card">
       <h3>1. New Messages</h3>
-      <p>Check Formspree: <a href="https://formspree.io" target="_blank">formspree.io</a></p>
+      <p>View all "Contact Us" and "Join Us" submissions here:</p>
+      <a href="https://formspree.io" target="_blank">→ Open Formspree Dashboard</a>
     </div>
+
     <div class="card">
-      <h3>2. Add New Event</h3>
-      <p>Edit `events.html` file in GitHub to add new events</p>
+      <h3>2. Members - K10,000</h3>
+      <p>Track all paid members. Create a Google Sheet and paste link below:</p>
+      <a href="#" target="_blank">→ Open Member Google Sheet</a>
+      <p style="font-size:12px; color:gray;">Tip: Make a Google Sheet, share it, and replace this link</p>
     </div>
+
     <div class="card">
-      <h3>3. Add Gallery Photos</h3>
-      <p>Upload photos to `images/` folder then edit `gallery.html`</p>
+      <h3>3. Update Website</h3>
+      <p><b>Add Event:</b> Edit <code>events.html</code> in GitHub<br>
+      <b>Add Gallery Photo:</b> Upload to <code>images/</code> folder then edit <code>gallery.html</code></p>
+    </div>
+
+    <div class="card">
+      <h3>4. Quick Logout</h3>
+      <a href="index.html">→ Back to Main Website</a>
     </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 LFB - Lift Forward Better</p>
+    </div>
+  </footer>
 </body>
 </html>
